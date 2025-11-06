@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hangwani Funeral Services</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            align-items: flex-start; /* Aligns items to the top */
+            gap: 20px;
+        }
+
+        .form-section, .contact-details {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%; /* Each section takes up half the container width */
+        }
+        h1, h2 {
+            color: #1a1a1a;
+            border-bottom: 2px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Important for padding */
+        }
+        .submit-btn {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%; /* Full width */
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #333;
+        }
+
+        .contact-details {
+            text-align: center;
+            padding: 20px;
+        }
+        .contact-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Optional: for a rounded image */
+            margin-bottom: 20px;
+        }
+        .contact-details p strong {
+            display: block; /* Make the contact details more readable */
+            margin-bottom: 5px;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack items on small screens */
+            }
+            .form-section, .contact-details {
+                width: 100%; /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <!-- Contact Details Section -->
+        <div class="contact-details">
+            <img src="images/sindie.webp" alt="Contact Us Image">
+            <h2>Contact us today</h2>
+            <p><strong>082 217 8503</strong></p>
+            <p><strong>info@hangwanifuneral.co.za</strong></p>
+            <p><strong>Head Office:</strong><br>Thohoyandou Limdev Building, office B30<br>Next Monate & multichoice</p>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Send us a message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Your Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" name="service">
+                        <option value="" selected disabled>Select Service</option>
+                        <option value="Funeral Plan">Funeral Plan</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Construct the WhatsApp message
+            let whatsappMessage = `*New Contact Form Submission*\n\n`;
+            whatsappMessage += `First Name: ${firstName}\n`;
+            whatsappMessage += `Last Name: ${lastName}\n`;
+            whatsappMessage += `Email: ${email}\n`;
+            whatsappMessage += `Phone: ${phone}\n`;
+            whatsappMessage += `Service: ${service}\n`;
+            whatsappMessage += `Message: ${message}\n`;
+
+            // Encode the message for the URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // Replace with your WhatsApp number, in international format
+            const whatsappNumber = "+27680600694";
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Redirect to WhatsApp
+            window.location.href = whatsappUrl;
+        });
+    </script>
+</body>
+</html>
