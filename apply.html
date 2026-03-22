@@ -4,318 +4,362 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form - Hangwani Funeral Services</title>
-    <!-- Internal CSS for styling -->
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #1a1a1a;
-            border-bottom: 2px solid #e60000;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .header-info {
-            border: 1px solid #000;
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            margin-bottom: 25px;
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-        }
-        .header-info div {
-            padding: 5px;
-        }
-        .info-section, .terms-section {
-            margin-bottom: 25px;
-        }
-        .info-section p {
-            margin-bottom: 15px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #555;
-        }
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group input[type="tel"],
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; /* Important for padding */
-        }
-        .form-group .name-fields {
-            display: flex;
-            gap: 20px;
-        }
-        .form-group .name-fields div {
-            width: 50%;
-        }
-        .submit-btn {
-            display: inline-block;
-            width: 100%;
-            background-color: #000000;
-            color: #ffffff;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .submit-btn:hover {
-            background-color: #333;
-        }
-        .terms-section h3 {
-            margin-bottom: 15px;
-        }
-        .terms-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .terms-section li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .terms-section li::before {
-            content: '-';
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 600px) {
-            .header-info {
-                flex-direction: column;
-            }
-            .form-group .name-fields {
-                flex-direction: column;
-                gap: 0;
-            }
-            .form-group .name-fields div {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="images/hangwanifuneral.webp">
+    <meta name="theme-color" content="#E60000" />
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- =========== Header =========== -->
+    <header>
+      <div class="container">
+        <a href="index.html#home" class="logo">
+          <img src="images/hangwanifuneral.webp" alt="Hangwani Funerals Logo" />
+        </a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#plans">Plans</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="header-contact">
+          <span>Give us a call: <strong>082 217 8503</strong></span>
+        </div>
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
 
-    
-
-    <div class="container">
+    <main id="main-content" class="mt-header">
+      <section class="container card">
         <!-- Header Information -->
-        <div class="header-info">
-            <div>
-                <strong>Reg no :</strong> 2006/200678/23<br>
-                <strong>Vat no :</strong> 4490314178<br>
-                <strong>Tax no :</strong> 9729005188
-            </div>
-            <div>
-                <strong>Thohoyandou CBD limdev building office B30</strong><br>
-                <strong>Cell :</strong> 082 217 8503 / 073 418 3751 / 073 815 2062<br>
-                <strong>Tax no :</strong> 9729005188<br>
-                <strong>Whatsapp :</strong> 071 154 3646<br>
-                <strong>Email :</strong> info@hangwanifuneral.co.za
-            </div>
+        <div class="header-info" style="border:1px solid #000; display:flex; justify-content:space-between; padding:15px; margin-bottom:25px; flex-wrap:wrap; gap:10px;">
+          <div>
+            <strong>Reg no :</strong> 2006/200678/23<br />
+            <strong>Vat no :</strong> 4490314178<br />
+            <strong>Tax no :</strong> 9729005188
+          </div>
+          <div>
+            <strong>Thohoyandou CBD limdev building office B30</strong><br />
+            <strong>Cell :</strong> 082 217 8503 / 073 418 3751 / 073 815 2062<br />
+            <strong>Tax no :</strong> 9729005188<br />
+            <strong>Whatsapp :</strong> 071 154 3646<br />
+            <strong>Email :</strong> info@hangwanifuneral.co.za
+          </div>
         </div>
 
         <!-- Plans Information -->
         <div class="info-section">
-            <p>For the mortuary options, there are four different price levels, each offering specific benefits with a 3-month waiting period for cashback eligibility.</p>
-            <p>The <strong>R130.00</strong> plan offers the same set of services, with an additional R1000.00 cashback available after a 3-month waiting period.</p>
-            <p>The <strong>R150.00</strong> option includes all of the previously mentioned services but with a "Budget" casket style and R1200.00 cashback, also after a 3-month waiting period.</p>
-            <p>Lastly, the <strong>R300.00</strong> option includes a "Quarter" casket style with all services, but no cashback is offered.</p>
-            <p>Each plan includes "HAFS 45 100," which may refer to a specific benefit code or additional service, as well as the complete set of offerings: decorations at the graveyard, radio, casket, tombstone, program, and mortuary services.</p>
+          <p>For the mortuary options, there are four different price levels, each offering specific benefits with a 3-month waiting period for cashback eligibility.</p>
+          <p>The <strong>R130.00</strong> plan offers the same set of services, with an additional R1000.00 cashback available after a 3-month waiting period.</p>
+          <p>The <strong>R150.00</strong> option includes all of the previously mentioned services but with a "Budget" casket style and R1200.00 cashback, also after a 3-month waiting period.</p>
+          <p>Lastly, the <strong>R300.00</strong> option includes a "Quarter" casket style with all services, but no cashback is offered.</p>
+          <p>Each plan includes "HAFS 45 100," which may refer to a specific benefit code or additional service, as well as the complete set of offerings: decorations at the graveyard, radio, casket, tombstone, program, and mortuary services.</p>
         </div>
 
         <!-- Application Form -->
         <form id="applicationForm">
-            <h2>1. Main member *</h2>
-            <div class="form-group">
-                <div class="name-fields">
-                    <div>
-                        <label for="main_first_name">First Name</label>
-                        <input type="text" id="main_first_name" name="main_first_name" required>
-                    </div>
-                    <div>
-                        <label for="main_last_name">Last Name</label>
-                        <input type="text" id="main_last_name" name="main_last_name" required>
-                    </div>
-                </div>
+          <h2>1. Main member *</h2>
+          <div class="form-group">
+            <div class="name-fields" style="display:flex; gap:20px; flex-wrap:wrap;">
+              <div style="flex:1 1 250px; min-width:200px;">
+                <label for="main_first_name">First Name</label>
+                <input type="text" id="main_first_name" name="main_first_name" required />
+              </div>
+              <div style="flex:1 1 250px; min-width:200px;">
+                <label for="main_last_name">Last Name</label>
+                <input type="text" id="main_last_name" name="main_last_name" required />
+              </div>
             </div>
-            <div class="form-group">
-                <label for="main_id">ID</label>
-                <input type="text" id="main_id" name="main_id">
-            </div>
-            <div class="form-group">
-                <label for="main_cell">Cell Number</label>
-                <input type="tel" id="main_cell" name="main_cell">
-            </div>
-            <div class="form-group">
-                <label for="main_email">Email *</label>
-                <input type="email" id="main_email" name="main_email" required>
-            </div>
-            <div class="form-group">
-                <label for="main_address">Residential Address</label>
-                <input type="text" id="main_address" name="main_address">
-            </div>
+          </div>
+          <div class="form-group">
+            <label for="main_id">ID</label>
+            <input type="text" id="main_id" name="main_id" />
+          </div>
+          <div class="form-group">
+            <label for="main_cell">Cell Number</label>
+            <input type="tel" id="main_cell" name="main_cell" />
+          </div>
+          <div class="form-group">
+            <label for="main_email">Email *</label>
+            <input type="email" id="main_email" name="main_email" required />
+          </div>
+          <div class="form-group">
+            <label for="main_address">Residential Address</label>
+            <input type="text" id="main_address" name="main_address" />
+          </div>
 
-            <h2>2. Spouse / beneficiary *</h2>
-             <div class="form-group">
-                <div class="name-fields">
-                    <div>
-                        <label for="spouse_first_name">First Name</label>
-                        <input type="text" id="spouse_first_name" name="spouse_first_name" required>
-                    </div>
-                    <div>
-                        <label for="spouse_last_name">Last Name</label>
-                        <input type="text" id="spouse_last_name" name="spouse_last_name" required>
-                    </div>
-                </div>
+          <h2>2. Spouse / beneficiary *</h2>
+          <div class="form-group">
+            <div class="name-fields" style="display:flex; gap:20px; flex-wrap:wrap;">
+              <div style="flex:1 1 250px; min-width:200px;">
+                <label for="spouse_first_name">First Name</label>
+                <input type="text" id="spouse_first_name" name="spouse_first_name" required />
+              </div>
+              <div style="flex:1 1 250px; min-width:200px;">
+                <label for="spouse_last_name">Last Name</label>
+                <input type="text" id="spouse_last_name" name="spouse_last_name" required />
+              </div>
             </div>
-            <div class="form-group">
-                <label for="spouse_id">ID</label>
-                <input type="text" id="spouse_id" name="spouse_id">
-            </div>
-            <div class="form-group">
-                <label for="spouse_cell">Cell Number</label>
-                <input type="tel" id="spouse_cell" name="spouse_cell">
-            </div>
-            <div class="form-group">
-                <label for="spouse_email">Email *</label>
-                <input type="email" id="spouse_email" name="spouse_email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="burial_plan">Choose a burial plan</label>
-                <select id="burial_plan" name="burial_plan">
-                    <option value="Plan B: R130">Plan A: R130 (R1000 Cashback)</option>
-                    <option value="Plan C: R150">Plan B: R150 (R1200 Cashback)</option>
-                    <option value="Plan D: R300">Plan C: R300 (Quarter Casket, No Cashback)</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="additional_members">Cover up to 17 People Plus Policy Holder (Name & Surname)</label>
-                <textarea id="additional_members" name="additional_members" rows="5"></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="declaration">Declaration *</label>
-                <select id="declaration" name="declaration" required>
-                    <option value="" disabled selected>Please select</option>
-                    <option value="Agree">Agree</option>
-                </select>
-                <small>Declaration: I declare that to the best of my knowledge and belief that the particulars above are true and correct. I understand and agree that any claim benefits under this policy and that I undertake to abide by the terms and conditions of the policy.</small>
-            </div>
+          </div>
+          <div class="form-group">
+            <label for="spouse_id">ID</label>
+            <input type="text" id="spouse_id" name="spouse_id" />
+          </div>
+          <div class="form-group">
+            <label for="spouse_cell">Cell Number</label>
+            <input type="tel" id="spouse_cell" name="spouse_cell" />
+          </div>
+          <div class="form-group">
+            <label for="spouse_email">Email *</label>
+            <input type="email" id="spouse_email" name="spouse_email" required />
+          </div>
 
-            <button type="submit" class="submit-btn">Submit</button>
+          <div class="form-group">
+            <label for="burial_plan">Choose a burial plan</label>
+            <select id="burial_plan" name="burial_plan">
+              <option value="Plan B: R130">Plan A: R130 (R1000 Cashback)</option>
+              <option value="Plan C: R150">Plan B: R150 (R1200 Cashback)</option>
+              <option value="Plan D: R300">Plan C: R300 (Quarter Casket, No Cashback)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="additional_members">Cover up to 17 People Plus Policy Holder (Name & Surname)</label>
+            <textarea id="additional_members" name="additional_members" rows="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="declaration">Declaration *</label>
+            <select id="declaration" name="declaration" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="Agree">Agree</option>
+            </select>
+            <small>Declaration: I declare that to the best of my knowledge and belief that the particulars above are true and correct. I understand and agree that any claim benefits under this policy and that I undertake to abide by the terms and conditions of the policy.</small>
+          </div>
+
+          <div class="form-group">
+            <p class="submission-note">
+              <strong>Please choose one option below:</strong> Submit via WhatsApp or Email (choose only one)
+            </p>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" class="submit-btn" id="whatsappBtn">Submit via WhatsApp</button>
+            <button type="button" class="submit-btn email-btn" id="emailBtn">Submit via Email</button>
+          </div>
         </form>
 
         <!-- Terms and Conditions -->
         <div class="terms-section">
-            <h3>TERMS AND CONDITIONS</h3>
-            <ul>
-                <li>Premiums are payable on or before the 7th of each month</li>
-                <li>Failure or delay to submit your claim within 3 days will render the claim null and void</li>
-                <li>Cover will cease automatically upon the non-payable of payments</li>
-                <li>Benefits will be given only if the decease is in our mortuary hangwani funeral</li>
-                <li>Transport and service are excluded</li>
-                <li>Waiting period is 3 months is for cashback and 4 months for R 300-00</li>
-                <li>The scheme is for funeral only and one book is payable</li>
-                <li>The scheme has no surrender value and is non-refundable</li>
-            </ul>
+          <h3>TERMS AND CONDITIONS</h3>
+          <ul>
+            <li>Premiums are payable on or before the 7th of each month</li>
+            <li>Failure or delay to submit your claim within 3 days will render the claim null and void</li>
+            <li>Cover will cease automatically upon the non-payable of payments</li>
+            <li>Benefits will be given only if the decease is in our mortuary hangwani funeral</li>
+            <li>Transport and service are excluded</li>
+            <li>Waiting period is 3 months is for cashback and 4 months for R 300-00</li>
+            <li>The scheme is for funeral only and one book is payable</li>
+            <li>The scheme has no surrender value and is non-refundable</li>
+          </ul>
         </div>
-    </div>
+      </section>
+    </main>
 
-    <!-- Internal JavaScript for form submission -->
+    <!-- =========== Footer =========== -->
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <img src="images/hangwanifuneral.webp" alt="Hangwani Funerals Logo" class="footer-logo" />
+          <p>Na dzi Phala Wethu!!</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#plans">Funeral Plan Form</a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <p><strong>Head office:</strong><br />Thohoyandou Limdev Building, office B30 Next to Monate & Multichoice.</p>
+          <p><strong>Phone Number:</strong> 015 023 0620</p>
+          <p><strong>Emergency No:</strong> 082 217 8503</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright 2025 - Designed by ZwieX for Hangwani Funeral Services</p>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27711543646?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Hangwani%20Funeral%20Services" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 339.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56 81.2 56 130.5 0 101.8-84.1 184.6-186.1 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
     <script>
-        document.getElementById('applicationForm').addEventListener('submit', function(event) {
-            // 1. Prevent the default form submission which would reload the page
-            event.preventDefault();
+      const applicationForm = document.getElementById('applicationForm');
 
-            // 2. Get all the form data
-            const mainFirstName = document.getElementById('main_first_name').value;
-            const mainLastName = document.getElementById('main_last_name').value;
-            const mainId = document.getElementById('main_id').value;
-            const mainCell = document.getElementById('main_cell').value;
-            const mainEmail = document.getElementById('main_email').value;
-            const mainAddress = document.getElementById('main_address').value;
+      function getFormData() {
+        return {
+          mainFirstName: document.getElementById('main_first_name').value,
+          mainLastName: document.getElementById('main_last_name').value,
+          mainId: document.getElementById('main_id').value,
+          mainCell: document.getElementById('main_cell').value,
+          mainEmail: document.getElementById('main_email').value,
+          mainAddress: document.getElementById('main_address').value,
+          spouseFirstName: document.getElementById('spouse_first_name').value,
+          spouseLastName: document.getElementById('spouse_last_name').value,
+          spouseId: document.getElementById('spouse_id').value,
+          spouseCell: document.getElementById('spouse_cell').value,
+          spouseEmail: document.getElementById('spouse_email').value,
+          burialPlan: document.getElementById('burial_plan').value,
+          additionalMembers: document.getElementById('additional_members').value,
+          declaration: document.getElementById('declaration').value
+        };
+      }
 
-            const spouseFirstName = document.getElementById('spouse_first_name').value;
-            const spouseLastName = document.getElementById('spouse_last_name').value;
-            const spouseId = document.getElementById('spouse_id').value;
-            const spouseCell = document.getElementById('spouse_cell').value;
-            const spouseEmail = document.getElementById('spouse_email').value;
+      function validateForm() {
+        const form = document.getElementById('applicationForm');
+        const data = getFormData();
+        
+        if (data.declaration !== 'Agree') {
+          alert('You must agree to the declaration to submit the form.');
+          return false;
+        }
+        
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return false;
+        }
+        
+        return true;
+      }
 
-            const burialPlan = document.getElementById('burial_plan').value;
-            const additionalMembers = document.getElementById('additional_members').value;
-            const declaration = document.getElementById('declaration').value;
+      function formatMessage(data, isWhatsApp) {
+        const prefix = isWhatsApp ? '*' : '';
+        const suffix = isWhatsApp ? '*' : '';
+        const newline = isWhatsApp ? '\n' : '\n';
+        
+        let message = `${prefix}--- NEW FUNERAL PLAN APPLICATION ---${suffix}${newline}${newline}`;
+        message += `${prefix}1. Main Member Details${suffix}${newline}`;
+        message += `Name: ${data.mainFirstName} ${data.mainLastName}${newline}`;
+        message += `ID: ${data.mainId}${newline}`;
+        message += `Cell: ${data.mainCell}${newline}`;
+        message += `Email: ${data.mainEmail}${newline}`;
+        message += `Address: ${data.mainAddress}${newline}${newline}`;
 
-            // Check if declaration is agreed
-            if (declaration !== 'Agree') {
-                alert('You must agree to the declaration to submit the form.');
-                return; // Stop the function
-            }
+        message += `${prefix}2. Spouse / Beneficiary Details${suffix}${newline}`;
+        message += `Name: ${data.spouseFirstName} ${data.spouseLastName}${newline}`;
+        message += `ID: ${data.spouseId}${newline}`;
+        message += `Cell: ${data.spouseCell}${newline}`;
+        message += `Email: ${data.spouseEmail}${newline}${newline}`;
 
-            // 3. Format the data into a readable message for WhatsApp
-            let message = `*--- NEW FUNERAL PLAN APPLICATION ---*\n\n`;
-            message += `*1. Main Member Details*\n`;
-            message += `Name: ${mainFirstName} ${mainLastName}\n`;
-            message += `ID: ${mainId}\n`;
-            message += `Cell: ${mainCell}\n`;
-            message += `Email: ${mainEmail}\n`;
-            message += `Address: ${mainAddress}\n\n`;
+        message += `${prefix}Selected Burial Plan${suffix}${newline}`;
+        message += `${data.burialPlan}${newline}${newline}`;
 
-            message += `*2. Spouse / Beneficiary Details*\n`;
-            message += `Name: ${spouseFirstName} ${spouseLastName}\n`;
-            message += `ID: ${spouseId}\n`;
-            message += `Cell: ${spouseCell}\n`;
-            message += `Email: ${spouseEmail}\n\n`;
+        if (data.additionalMembers.trim() !== '') {
+          message += `${prefix}Additional Members Covered${suffix}${newline}`;
+          message += `${data.additionalMembers}${newline}${newline}`;
+        }
 
-            message += `*Selected Burial Plan*\n`;
-            message += `${burialPlan}\n\n`;
-            
-            if(additionalMembers.trim() !== '') {
-                message += `*Additional Members Covered*\n`;
-                message += `${additionalMembers}\n\n`;
-            }
+        message += `${prefix}Declaration${suffix}${newline}`;
+        message += `The applicant has agreed to the terms and conditions.${newline}`;
+        
+        return message;
+      }
 
-            message += `*Declaration*\n`;
-            message += `The applicant has agreed to the terms and conditions.\n`;
+      // WhatsApp submission
+      applicationForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        if (!validateForm()) return;
 
-            // 4. Encode the message for the URL and create the WhatsApp link
-            const whatsappNumber = "27711543646"; // South African number format (27 + number without leading 0)
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        const data = getFormData();
+        const message = formatMessage(data, true);
 
-            // 5. Redirect the user to WhatsApp
-            window.location.href = whatsappUrl;
+        const whatsappNumber = "27711543646";
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.location.href = whatsappUrl;
+      });
+
+      // Email submission
+      document.getElementById('emailBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        if (!validateForm()) return;
+
+        const data = getFormData();
+        const emailBtn = this;
+        const originalText = emailBtn.textContent;
+        
+        // Disable button and show loading state
+        emailBtn.disabled = true;
+        emailBtn.textContent = 'Submitting...';
+
+        // Prepare form data
+        const formData = new FormData();
+        formData.append('main_first_name', data.mainFirstName);
+        formData.append('main_last_name', data.mainLastName);
+        formData.append('main_id', data.mainId || '');
+        formData.append('main_cell', data.mainCell || '');
+        formData.append('main_email', data.mainEmail);
+        formData.append('main_address', data.mainAddress || '');
+        formData.append('spouse_first_name', data.spouseFirstName);
+        formData.append('spouse_last_name', data.spouseLastName);
+        formData.append('spouse_id', data.spouseId || '');
+        formData.append('spouse_cell', data.spouseCell || '');
+        formData.append('spouse_email', data.spouseEmail);
+        formData.append('burial_plan', data.burialPlan || '');
+        formData.append('additional_members', data.additionalMembers || '');
+        formData.append('declaration', data.declaration);
+
+        // Submit to FormSubmit
+        fetch('https://formsubmit.co/ajax/info@hangwanifuneral.co.za', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: formData
+        })
+        .then(response => response.json())
+        .then(result => {
+          if (result.success) {
+            window.location.href = 'thank-you.html';
+          } else {
+            alert(result.message || 'An error occurred. Please try again.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Sorry, there was an error submitting your application. Please try again later.');
+        })
+        .finally(() => {
+          // Re-enable button
+          emailBtn.disabled = false;
+          emailBtn.textContent = originalText;
         });
+      });
     </script>
 
 </body>
